@@ -2,20 +2,31 @@
 <testng-results skipped="0" failed="1" total="1" passed="0">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="9926" started-at="2019-05-24T12:22:48Z" finished-at="2019-05-24T12:22:58Z">
+  <suite name="Default suite" duration-ms="4936" started-at="2019-05-24T12:38:10Z" finished-at="2019-05-24T12:38:15Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="9926" started-at="2019-05-24T12:22:48Z" finished-at="2019-05-24T12:22:58Z">
+    <test name="Default test" duration-ms="4936" started-at="2019-05-24T12:38:10Z" finished-at="2019-05-24T12:38:15Z">
       <class name="com.datamato.tests.WelcomePageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.datamato.tests.WelcomePageTest@30c7da1e]" name="setup" is-config="true" duration-ms="9239" started-at="2019-05-24T17:52:48Z" finished-at="2019-05-24T17:52:57Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.datamato.tests.WelcomePageTest@57829d67]" name="setup" is-config="true" duration-ms="4293" started-at="2019-05-24T18:08:10Z" finished-at="2019-05-24T18:08:14Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="FAIL" signature="openAppTest()[pri:0, instance:com.datamato.tests.WelcomePageTest@30c7da1e]" name="openAppTest" duration-ms="5" started-at="2019-05-24T17:52:57Z" description="WelcomePage" finished-at="2019-05-24T17:52:57Z">
+        <test-method status="PASS" signature="beforeTestMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@57829d67]" name="beforeTestMethod" is-config="true" duration-ms="1" started-at="2019-05-24T18:08:14Z" finished-at="2019-05-24T18:08:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.datamato.tests.WelcomePageTest.openAppTest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeTestMethod -->
+        <test-method status="FAIL" signature="openAppTest()[pri:0, instance:com.datamato.tests.WelcomePageTest@57829d67]" name="openAppTest" duration-ms="6" started-at="2019-05-24T18:08:14Z" description="WelcomePage" finished-at="2019-05-24T18:08:14Z">
           <exception class="java.lang.NullPointerException">
             <full-stacktrace>
               <![CDATA[java.lang.NullPointerException
-	at com.datamato.pages.WelcomePage.welcomePageLoad(WelcomePage.java:49)
+	at com.datamato.pages.WelcomePage.welcomePageLoad(WelcomePage.java:57)
 	at com.datamato.tests.WelcomePageTest.openAppTest(WelcomePageTest.java:14)
 	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
 	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:62)
@@ -47,10 +58,21 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openAppTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.datamato.tests.WelcomePageTest@30c7da1e]" name="tearDown" is-config="true" duration-ms="668" started-at="2019-05-24T17:52:57Z" finished-at="2019-05-24T17:52:58Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.datamato.tests.WelcomePageTest@57829d67]" name="tearDown" is-config="true" duration-ms="622" started-at="2019-05-24T18:08:14Z" finished-at="2019-05-24T18:08:15Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
+        <test-method status="PASS" signature="afterTestMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@57829d67]" name="afterTestMethod" is-config="true" duration-ms="0" started-at="2019-05-24T18:08:14Z" finished-at="2019-05-24T18:08:14Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.datamato.tests.WelcomePageTest.openAppTest() throws java.lang.Exception]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterTestMethod -->
       </class> <!-- com.datamato.tests.WelcomePageTest -->
     </test> <!-- Default test -->
   </suite> <!-- Default suite -->

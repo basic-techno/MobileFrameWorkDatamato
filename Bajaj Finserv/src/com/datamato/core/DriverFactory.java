@@ -1,11 +1,14 @@
 package com.datamato.core;
 
+import java.lang.reflect.Method;
 import java.net.MalformedURLException;
 import java.net.URL;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
+import org.testng.annotations.AfterMethod;
 import org.testng.annotations.BeforeClass;
+import org.testng.annotations.BeforeMethod;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -26,6 +29,7 @@ public class DriverFactory {
 	}
 
 	public void android() throws MalformedURLException {
+		System.out.println("Application Started..");
 		System.out.println("Inside initDriver method");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("deviceName", "OnePlus6T");
@@ -44,6 +48,14 @@ public class DriverFactory {
 		}
 
 	}
+	@BeforeMethod
+	 public void beforeTestMethod(Method testMethod){
+	    System.out.println("Before Testmethod: " + testMethod.getName());       
+	 }
+	@AfterMethod
+	 public void afterTestMethod(Method testMethod){
+	    System.out.println("After Testmethod: " + testMethod.getName());       
+	 }
 
 	@AfterClass
 	public void tearDown() {

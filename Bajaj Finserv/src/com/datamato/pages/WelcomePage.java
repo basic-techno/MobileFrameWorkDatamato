@@ -1,7 +1,6 @@
 package com.datamato.pages;
 
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
 import org.openqa.selenium.support.FindBy;
 import org.openqa.selenium.support.How;
 import org.openqa.selenium.support.PageFactory;
@@ -26,18 +25,27 @@ public class WelcomePage extends BasePage {
 		PageFactory.initElements(new AppiumFieldDecorator(driver), this);
 	}
 
-//	@CacheLookup
+	/*@CacheLookup
+	@AndroidFindBy(xpath= "//android.view.View[@index='2']")*/
+	
 	@FindBy(how = How.XPATH, using = "//android.view.View[@index='2']")
 	public WebElement newUser;
 
-//	@CacheLookup
+	/*@CacheLookup
+	@AndroidFindBy(xpath= "//android.view.View[@index='4']")*/
+	
 	@FindBy(how = How.XPATH, using = "//android.view.View[@index='4']")
 	public WebElement existingCustomer;
 
-//	@CacheLookup
+	/*@CacheLookup
+	@AndroidFindBy(xpath="//android.view.View[@text='Existing Customer']")*/
+	
 	@FindBy(how = How.XPATH, using = "//android.view.View[@text='Existing Customer']")
 	public WebElement existingCustomertxt;
 
+	/*@CacheLookup
+	@AndroidFindBy(xpath="//android.view.View[@text='Welcome To Bajaj Finserv']")*/
+	
 	@FindBy(how = How.XPATH, using = "//android.view.View[@text='Welcome To Bajaj Finserv']")
 	public WebElement welcomeText;
 
