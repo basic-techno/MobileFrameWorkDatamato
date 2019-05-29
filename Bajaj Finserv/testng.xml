@@ -6,6 +6,10 @@
 			</class>
 			<class name="com.datamato.tests.LoginToExistingCustomerTest">
 			</class>
+			<class name="com.datamato.tests.PersonalLoanTest">
+			</class>
+			<class name="com.datamato.tests.PocketInsuranceTest">
+			</class>
 		</classes>
 	</test>
 </suite>

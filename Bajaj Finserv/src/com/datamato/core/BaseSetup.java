@@ -6,11 +6,10 @@ import java.net.URL;
 import java.util.concurrent.TimeUnit;
 
 import org.openqa.selenium.remote.DesiredCapabilities;
-import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
 import org.testng.annotations.AfterSuite;
-import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
+import org.testng.annotations.BeforeSuite;
 
 import io.appium.java_client.MobileElement;
 import io.appium.java_client.android.AndroidDriver;
@@ -18,11 +17,11 @@ import io.appium.java_client.android.AndroidDriver;
 public class BaseSetup {
 	private final String appiumPort = "4723";
 	private final String serverIp = "0.0.0.0";
-	String workingDevice = "a315e67c";
-	//String workingDevice = "d6f08719";
+	//String workingDevice = "a315e67c";
+	String workingDevice = "d6f08719";
 	private static AndroidDriver<MobileElement> driver;
 
-	@BeforeClass
+	@BeforeSuite
 	public void setup() throws MalformedURLException {
 		init();
 	}

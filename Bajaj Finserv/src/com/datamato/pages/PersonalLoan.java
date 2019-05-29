@@ -98,7 +98,7 @@ public class PersonalLoan {
 		}
 	}
 
-	public boolean PersonalLoanApplyNow() {
+	public boolean personalLoanApplyNow() {
 		personalLoanApplyNowButton().click();
 		if (applyNowDisplayedStringOnApp().getText().equals("Getting Personal Loans couldn’t be quicker!")) {
 			System.out.println("Personal Loan Page open successfully..!");
@@ -111,7 +111,7 @@ public class PersonalLoan {
 		}
 	}
 
-	public boolean PersonalLoanSeeDetails() {
+	public boolean personalLoanSeeDetails() {
 		personalLoanSeeDetailsButton().click();
 
 		if (seeDetailsDisplayedStringOnApp().getText().equals("Personal Loan")) {

@@ -5,6 +5,8 @@
     <classes>
       <class name="com.datamato.tests.WelcomePageTest"/>
       <class name="com.datamato.tests.LoginToExistingCustomerTest"/>
+      <class name="com.datamato.tests.PersonalLoanTest"/>
+      <class name="com.datamato.tests.PocketInsuranceTest"/>
     </classes>
   </test> <!-- Test1 -->
 </suite> <!-- Failed suite [TestSuiteDemo] -->
