@@ -6,17 +6,4 @@
       <class name="com.datamato.tests.WelcomePageTest"/>
     </classes>
   </test> <!-- Default test -->
-  <test name="Default test(failed)">
-    <classes>
-      <class name="com.datamato.tests.WelcomePageTest">
-        <methods>
-          <include name="setup"/>
-          <include name="openAppTest"/>
-          <include name="tearDown"/>
-          <include name="afterTestMethod"/>
-          <include name="beforeTestMethod"/>
-        </methods>
-      </class> <!-- com.datamato.tests.WelcomePageTest -->
-    </classes>
-  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

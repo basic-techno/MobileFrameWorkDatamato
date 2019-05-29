@@ -17,6 +17,7 @@ import io.appium.java_client.android.AndroidDriver;
 public class BaseSetup {
 	private final String appiumPort = "4723";
 	private final String serverIp = "0.0.0.0";
+	// String workingDevice = "a315e67c";
 	String workingDevice = "d6f08719";
 	private static AndroidDriver<MobileElement> driver;
 
@@ -26,25 +27,23 @@ public class BaseSetup {
 	}
 
 	public AndroidDriver<MobileElement> getDriver() throws MalformedURLException {
-		System.out.println("in get driver :" + driver);
 		return driver;
 	}
 
 	public void init() throws MalformedURLException {
 		System.out.println("Application Started..");
-		System.out.println("Inside initDriver method");
 		DesiredCapabilities capabilities = new DesiredCapabilities();
 		capabilities.setCapability("deviceName", "OnePlus6T");
 		capabilities.setCapability("udid", workingDevice);
 		capabilities.setCapability("appPackage", "com.BajajServiceApp.VikramUAT");
 		capabilities.setCapability("appActivity", ".MainActivity");
-		capabilities.setCapability("noReset", true);
+		capabilities.setCapability("noReset", false);
 		String serverUrl = "http://" + serverIp + ":" + appiumPort + "/wd/hub";
 
 		try {
 			System.out.println("Argument to driver object : " + serverUrl);
 			driver = new AndroidDriver<MobileElement>(new URL(serverUrl), capabilities);
-			//driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
+			driver.manage().timeouts().implicitlyWait(10, TimeUnit.SECONDS);
 
 		} catch (NullPointerException | MalformedURLException ex) {
 			throw new RuntimeException("appium driver could not be initialised for device ");
@@ -52,18 +51,22 @@ public class BaseSetup {
 	}
 
 	@BeforeMethod
-	public void beforeTestMethod(Method testMethod) {
-		System.out.println("Before Testmethod: " + testMethod.getName());
+	public void beforeMethod(Method method) {
+		System.out.println("-----------------------------------------");
+		System.out.println("Starting Method :" + method.getName());
+		System.out.println("-----------------------------------------");
 	}
 
 	@AfterMethod
-	public void afterTestMethod(Method testMethod) {
-		System.out.println("After Testmethod: " + testMethod.getName());
+	public void afterMethod(Method method) {
+		System.out.println("-----------------------------------------");
+		System.out.println("Ending Method :" + method.getName());
+		System.out.println("-----------------------------------------");
 	}
 
 	@AfterClass
 	public void tearDown() {
-		System.out.println("Closing Application");
+		System.out.println("Application Closed..");
 		driver.quit();
 	}
 }

@@ -2,60 +2,37 @@ package com.datamato.pages;
 
 import java.net.MalformedURLException;
 
+import org.openqa.selenium.By;
 import org.openqa.selenium.WebElement;
-import org.openqa.selenium.support.CacheLookup;
-import org.openqa.selenium.support.FindBy;
-import org.openqa.selenium.support.PageFactory;
-import org.testng.Assert;
+import com.datamato.core.BaseSetup;
 
-import com.datamato.core.Driver;
+public class WelcomePage {
 
-import io.appium.java_client.pagefactory.AndroidFindBy;
-import io.appium.java_client.pagefactory.AppiumFieldDecorator;
+	BaseSetup baseSetup;
 
-public class WelcomePage extends Driver {
-
-	PageObjects welcomepageObjects;
+	private WebElement newUser;
+	private WebElement existingCustomer;
+	private WebElement welcomeText;
+	private WebElement existingCustomertxt;
 
 	public WelcomePage() throws MalformedURLException {
-		super();
-		welcomepageObjects = new PageObjects();
-		PageFactory.initElements(new AppiumFieldDecorator(driver), welcomepageObjects);
-	}
-
-	public void displayText() {
-		String str = welcomepageObjects.welcomeText.getText();
-		System.out.println(str);
+		baseSetup = new BaseSetup();
+		newUser = baseSetup.getDriver().findElement(By.xpath("//android.view.View[@index='2']"));
+		existingCustomer = baseSetup.getDriver().findElement(By.xpath("//android.view.View[@index='2']"));
+		welcomeText = baseSetup.getDriver()
+				.findElement(By.xpath("//android.view.View[@text='Welcome To Bajaj Finserv']"));
+		existingCustomertxt = baseSetup.getDriver()
+				.findElement(By.xpath("//android.view.View[@text='Existing Customer']"));
 	}
 
 	public boolean welcomePageLoad() {
-		if (welcomepageObjects.existingCustomer.isDisplayed() && welcomepageObjects.existingCustomertxt.isDisplayed()
-				&& welcomepageObjects.welcomeText.isDisplayed() && welcomepageObjects.newUser.isDisplayed()) {
-			Assert.assertTrue(true, "App open Successfully..!");
+		if (existingCustomer.isDisplayed() && existingCustomertxt.isDisplayed() && welcomeText.isDisplayed()
+				&& newUser.isDisplayed()) {
+			System.out.println("Welcome page loaded successfully....!");
 			return true;
 		} else {
-			System.out.println("App is not loaded..!");
-			Assert.assertTrue(false, "App is not loaded..!");
+			System.out.println("Welcome page not loaded successfully...!");
 			return false;
 		}
-	}
-
-	class PageObjects {
-
-		@FindBy(xpath = "//android.view.View[@index='2']")
-		@CacheLookup
-		public WebElement newUser;
-
-		@FindBy(xpath = "//android.view.View[@index='4']")
-		@CacheLookup
-		public WebElement existingCustomer;
-
-		@FindBy(xpath = "//android.view.View[@text='Existing Customer']")
-		@CacheLookup
-		public WebElement existingCustomertxt;
-
-		@FindBy(xpath = "//android.view.View[@text='Welcome To Bajaj Finserv']")
-		@CacheLookup
-		public WebElement welcomeText;
 	}
 }

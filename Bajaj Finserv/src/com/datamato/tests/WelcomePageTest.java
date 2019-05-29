@@ -1,16 +1,16 @@
 package com.datamato.tests;
 
+import org.testng.Assert;
 import org.testng.annotations.Test;
 
 import com.datamato.core.BaseSetup;
 import com.datamato.pages.WelcomePage;
 
-public class WelcomePageTest extends BaseSetup {
+public class WelcomePageTest extends BaseSetup{
 
 	@Test()
-	public void openAppTest() throws Exception {
+	public void welcomePageTest() throws Exception {
 		WelcomePage welcomePage = new WelcomePage();
-	//	welcomePage.welcomePageLoad();
-		welcomePage.displayText();
+		Assert.assertEquals(welcomePage.welcomePageLoad(), true);
 	}
 }
