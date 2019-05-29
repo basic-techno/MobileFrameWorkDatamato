@@ -1,47 +1,79 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<testng-results skipped="0" failed="0" total="1" passed="1">
+<testng-results skipped="0" failed="0" total="3" passed="3">
   <reporter-output>
   </reporter-output>
-  <suite name="Default suite" duration-ms="142125" started-at="2019-05-29T04:32:50Z" finished-at="2019-05-29T04:35:12Z">
+  <suite name="TestSuiteDemo" duration-ms="22783" started-at="2019-05-29T11:50:28Z" finished-at="2019-05-29T11:50:51Z">
     <groups>
     </groups>
-    <test name="Default test" duration-ms="142125" started-at="2019-05-29T04:32:50Z" finished-at="2019-05-29T04:35:12Z">
+    <test name="Test1" duration-ms="22783" started-at="2019-05-29T11:50:28Z" finished-at="2019-05-29T11:50:51Z">
       <class name="com.datamato.tests.WelcomePageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.datamato.tests.WelcomePageTest@7a0ac6e3]" name="setup" is-config="true" duration-ms="134349" started-at="2019-05-29T10:02:50Z" finished-at="2019-05-29T10:05:04Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.datamato.tests.WelcomePageTest@71be98f5]" name="setup" is-config="true" duration-ms="12120" started-at="2019-05-29T17:20:28Z" finished-at="2019-05-29T17:20:40Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@7a0ac6e3]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-05-29T10:05:04Z" finished-at="2019-05-29T10:05:04Z">
+        <test-method status="PASS" signature="welcomePageLoad()[pri:0, instance:com.datamato.tests.WelcomePageTest@71be98f5]" name="welcomePageLoad" duration-ms="2858" started-at="2019-05-29T17:20:40Z" finished-at="2019-05-29T17:20:43Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- welcomePageLoad -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@71be98f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-29T17:20:40Z" finished-at="2019-05-29T17:20:40Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.datamato.tests.WelcomePageTest.welcomePageTest() throws java.lang.Exception]]>
+                <![CDATA[public void com.datamato.tests.WelcomePageTest.welcomePageLoad() throws java.lang.InterruptedException,java.net.MalformedURLException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="welcomePageTest()[pri:0, instance:com.datamato.tests.WelcomePageTest@7a0ac6e3]" name="welcomePageTest" duration-ms="3101" started-at="2019-05-29T10:05:04Z" finished-at="2019-05-29T10:05:08Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- welcomePageTest -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.datamato.tests.WelcomePageTest@7a0ac6e3]" name="tearDown" is-config="true" duration-ms="4662" started-at="2019-05-29T10:05:08Z" finished-at="2019-05-29T10:05:12Z">
-          <reporter-output>
-          </reporter-output>
-        </test-method> <!-- tearDown -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@7a0ac6e3]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-29T10:05:08Z" finished-at="2019-05-29T10:05:08Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@71be98f5]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-05-29T17:20:43Z" finished-at="2019-05-29T17:20:43Z">
           <params>
             <param index="0">
               <value>
-                <![CDATA[public void com.datamato.tests.WelcomePageTest.welcomePageTest() throws java.lang.Exception]]>
+                <![CDATA[public void com.datamato.tests.WelcomePageTest.welcomePageLoad() throws java.lang.InterruptedException,java.net.MalformedURLException]]>
               </value>
             </param>
           </params>
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="selectExistingCustomer()[pri:0, instance:com.datamato.tests.WelcomePageTest@71be98f5]" name="selectExistingCustomer" duration-ms="4377" started-at="2019-05-29T17:20:43Z" depends-on-methods="com.datamato.tests.WelcomePageTest.welcomePageLoad" finished-at="2019-05-29T17:20:47Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- selectExistingCustomer -->
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@71be98f5]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-29T17:20:43Z" finished-at="2019-05-29T17:20:43Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.datamato.tests.WelcomePageTest.selectExistingCustomer() throws java.lang.InterruptedException,java.net.MalformedURLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- beforeMethod -->
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@71be98f5]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-29T17:20:47Z" finished-at="2019-05-29T17:20:47Z">
+          <params>
+            <param index="0">
+              <value>
+                <![CDATA[public void com.datamato.tests.WelcomePageTest.selectExistingCustomer() throws java.lang.InterruptedException,java.net.MalformedURLException]]>
+              </value>
+            </param>
+          </params>
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- afterMethod -->
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.datamato.tests.WelcomePageTest@71be98f5]" name="tearDown" is-config="true" duration-ms="5790" started-at="2019-05-29T17:20:51Z" finished-at="2019-05-29T17:20:57Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- tearDown -->
       </class> <!-- com.datamato.tests.WelcomePageTest -->
-    </test> <!-- Default test -->
-  </suite> <!-- Default suite -->
+      <class name="com.datamato.tests.LoginToExistingCustomerTest">
+        <test-method status="PASS" signature="loginToExisitngCustomer()[pri:0, instance:com.datamato.tests.LoginToExistingCustomerTest@6fadae5d]" name="loginToExisitngCustomer" duration-ms="3408" started-at="2019-05-29T17:20:47Z" finished-at="2019-05-29T17:20:51Z">
+          <reporter-output>
+          </reporter-output>
+        </test-method> <!-- loginToExisitngCustomer -->
+      </class> <!-- com.datamato.tests.LoginToExistingCustomerTest -->
+    </test> <!-- Test1 -->
+  </suite> <!-- TestSuiteDemo -->
 </testng-results>

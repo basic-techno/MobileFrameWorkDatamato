@@ -8,6 +8,7 @@ import java.util.concurrent.TimeUnit;
 import org.openqa.selenium.remote.DesiredCapabilities;
 import org.testng.annotations.AfterClass;
 import org.testng.annotations.AfterMethod;
+import org.testng.annotations.AfterSuite;
 import org.testng.annotations.BeforeClass;
 import org.testng.annotations.BeforeMethod;
 
@@ -17,8 +18,8 @@ import io.appium.java_client.android.AndroidDriver;
 public class BaseSetup {
 	private final String appiumPort = "4723";
 	private final String serverIp = "0.0.0.0";
-	// String workingDevice = "a315e67c";
-	String workingDevice = "d6f08719";
+	String workingDevice = "a315e67c";
+	//String workingDevice = "d6f08719";
 	private static AndroidDriver<MobileElement> driver;
 
 	@BeforeClass
@@ -64,7 +65,7 @@ public class BaseSetup {
 		System.out.println("-----------------------------------------");
 	}
 
-	@AfterClass
+	@AfterSuite
 	public void tearDown() {
 		System.out.println("Application Closed..");
 		driver.quit();

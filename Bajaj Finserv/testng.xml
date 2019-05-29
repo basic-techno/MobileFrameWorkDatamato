@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="TestSuiteDemo" verbose="1">
+	<test name="Test1">
+		<classes>
+			<class name="com.datamato.tests.WelcomePageTest">
+			</class>
+			<class name="com.datamato.tests.LoginToExistingCustomerTest">
+			</class>
+		</classes>
+	</test>
+</suite>
