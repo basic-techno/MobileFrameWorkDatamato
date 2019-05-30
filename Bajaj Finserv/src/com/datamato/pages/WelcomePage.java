@@ -1,5 +1,9 @@
 package com.datamato.pages;
 
+/**
+ * @author Datamato
+ * @version 1.0
+ */
 import java.net.MalformedURLException;
 
 import org.openqa.selenium.By;
@@ -14,6 +18,10 @@ public class WelcomePage {
 	private static AndroidDriver<MobileElement> androidDriver;
 	BaseSetup baseSetup = new BaseSetup();
 
+	/**
+	 * Constructor is used to initilize driver, it gets value from Super class
+	 * known as BaseSetup
+	 */
 	public WelcomePage() throws MalformedURLException {
 		androidDriver = baseSetup.getDriver();
 
@@ -27,10 +35,16 @@ public class WelcomePage {
 
 	// For Existing Customer login Page
 	By loginExistingCutomerText = By.xpath("//android.view.View[@text='LOG IN TO ACCESS CUSTOMER SERVICE']");
-	By experiaID = By.xpath("//*[@class='android.widget.EditText' and ./parent::*[(./preceding-sibling::* | ./following-sibling::*)[@class='android.view.View']]]");
-	By password = By.xpath("//*[@class='android.widget.EditText' and ./parent::*[./parent::*[(./preceding-sibling::* | ./following-sibling::*)[@class='android.view.View']]]]");
+	By experiaID = By.xpath(
+			"//*[@class='android.widget.EditText' and ./parent::*[(./preceding-sibling::* | ./following-sibling::*)[@class='android.view.View']]]");
+	By password = By.xpath(
+			"//*[@class='android.widget.EditText' and ./parent::*[./parent::*[(./preceding-sibling::* | ./following-sibling::*)[@class='android.view.View']]]]");
 	By loginButton = By.xpath("//android.widget.Button[@text='LOGIN']");
 
+	/**
+	 * 
+	 * @return WebElements from HomePage and Exisitng Customer login page
+	 */
 	public WebElement newUser() {
 		return androidDriver.findElement(newUser);
 	}
@@ -63,28 +77,27 @@ public class WelcomePage {
 		return androidDriver.findElement(loginButton);
 	}
 
-	public boolean welcomePageLoad() throws InterruptedException {
-		if (newUser().isEnabled() && existingCustomer().isEnabled()
-				&& welcomePageText().getText().equals("Tell us your customer type.")) {
-
+	/**
+	 * This method is used to checked Home Page is loaded or not
+	 */
+	public String welcomePageContent() throws InterruptedException {
+		if (newUser().isEnabled() && existingCustomer().isEnabled()) {
 			System.out.println("Welcome page loaded successfully..!");
-			return true;
-		} else {
-			System.out.println("Welcome page not loaded..");
-			return false;
 		}
-
+		return welcomePageText().getText();
 	}
 
+	/**
+	 * This method is used to select Existing User Tab and checked Login Page is
+	 * loaded or not
+	 */
 	public boolean selectExistingCustomer() throws InterruptedException, MalformedURLException {
 		existingCustomer().click();
 		Thread.sleep(3000);
 		if (experiaID().isDisplayed() && password().isDisplayed()) {
-				System.out.println("Existing Customer login page opened successfully..!");
-				return true;
-			}
-			 else {
-			System.out.println("Existing Customer login page not open..");
+			System.out.println("Existing Customer login page opened successfully..!");
+			return true;
+		} else {
 			return false;
 		}
 	}

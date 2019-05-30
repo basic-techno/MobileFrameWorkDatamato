@@ -3,7 +3,46 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test verbose="2" name="Default test">
     <classes>
-      <class name="com.datamato.tests.WelcomePageTest"/>
+      <class name="com.datamato.tests.WelcomePageTest">
+        <methods>
+          <include name="welcomePageLoad"/>
+        </methods>
+      </class> <!-- com.datamato.tests.WelcomePageTest -->
+      <class name="com.datamato.tests.LoginToExistingCustomerTest">
+        <methods>
+          <include name="loginToExisitngCustomer"/>
+        </methods>
+      </class> <!-- com.datamato.tests.LoginToExistingCustomerTest -->
+      <class name="com.datamato.tests.PersonalLoanTest">
+        <methods>
+          <include name="openRecommendedOffersPage"/>
+          <include name="personalLoanCalculator"/>
+        </methods>
+      </class> <!-- com.datamato.tests.PersonalLoanTest -->
     </classes>
   </test> <!-- Default test -->
+  <test name="Default test(failed)">
+    <classes>
+      <class name="com.datamato.tests.WelcomePageTest">
+        <methods>
+          <include name="setup"/>
+          <include name="afterMethod"/>
+          <include name="tearDown"/>
+          <include name="beforeMethod"/>
+          <include name="welcomePageLoad"/>
+        </methods>
+      </class> <!-- com.datamato.tests.WelcomePageTest -->
+      <class name="com.datamato.tests.LoginToExistingCustomerTest">
+        <methods>
+          <include name="loginToExisitngCustomer"/>
+        </methods>
+      </class> <!-- com.datamato.tests.LoginToExistingCustomerTest -->
+      <class name="com.datamato.tests.PersonalLoanTest">
+        <methods>
+          <include name="openRecommendedOffersPage"/>
+          <include name="personalLoanCalculator"/>
+        </methods>
+      </class> <!-- com.datamato.tests.PersonalLoanTest -->
+    </classes>
+  </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->

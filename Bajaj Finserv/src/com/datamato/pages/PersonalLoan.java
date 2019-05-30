@@ -1,5 +1,9 @@
 package com.datamato.pages;
 
+/**
+ * @author Datamato
+ * @version 1.0
+ */
 import java.net.MalformedURLException;
 
 import org.openqa.selenium.By;
@@ -14,6 +18,10 @@ public class PersonalLoan {
 	private static AndroidDriver<MobileElement> androidDriver;
 	BaseSetup baseSetup = new BaseSetup();
 
+	/**
+	 * Constructor is used to initilize driver, it gets value from Super class
+	 * known as BaseSetup
+	 */
 	public PersonalLoan() throws MalformedURLException {
 		androidDriver = baseSetup.getDriver();
 	}
@@ -37,6 +45,9 @@ public class PersonalLoan {
 
 	By backButtonOFApp = By.xpath("//*[@contentDescription='close button']");
 
+	/**
+	 * @return WebElements from PersonalLoan Page
+	 */
 	public WebElement recommendedOffertab() {
 		return androidDriver.findElement(recommendedOffertab);
 	}
@@ -73,55 +84,55 @@ public class PersonalLoan {
 		return androidDriver.findElement(seeDetailsDisplayedStringOnApp);
 	}
 
-	public boolean recommendedOffersPage() {
+	/**
+	 * This method is used to click on Recommended Tab and checked whether the
+	 * required page is open or not
+	 */
+	public String recommendedOffersPage() {
 		recommendedOffertab().click();
-		if (recommendedOfferTitle().getText().equals("Recommended Offers")) {
-			System.out.println("Open Recommended Offer page susscessfully..");
-			return true;
-		} else {
-			System.out.println("Not opened Recommended offer page");
-			return false;
-		}
+		System.out.println("Open Recommended Offer page successfully..");
+		return recommendedOfferTitle().getText();
 	}
 
-	public boolean personalLoanCalculator() {
+	/**
+	 * This method is used to click on Calculator Button from Personal Loan
+	 * section and checked whether the required page is open or not
+	 */
+	public String personalLoanCalculator() throws InterruptedException {
 		personalLoadCalculatorButton().click();
-
-		if (calculatorDisplayedStringOnApp().getText().equals("Flexi Interest-only Loan EMI Calculator")) {
-			System.out.println("Calculator page open successfully..!");
-			backButtonOFApp().click();
-			System.out.println("Moving to previous page..");
-			return true;
-		} else {
-			System.out.println("Calculator page not open...");
-			return false;
-		}
+		Thread.sleep(2000);
+		System.out.println("Calculator page open successfully..!");
+		String calculatorDisplayText = calculatorDisplayedStringOnApp().getText();
+		System.out.println("Moving to previous page..");
+		backButtonOFApp().click();
+		return calculatorDisplayText;
 	}
 
-	public boolean personalLoanApplyNow() {
+	/**
+	 * This method is used to click on Appy Now Button from Personal Loan
+	 * section and checked whether the required page is open or not
+	 */
+	public String personalLoanApplyNow() throws InterruptedException {
 		personalLoanApplyNowButton().click();
-		if (applyNowDisplayedStringOnApp().getText().equals("Getting Personal Loans couldn’t be quicker!")) {
-			System.out.println("Personal Loan Page open successfully..!");
-			backButtonOFApp().click();
-			System.out.println("Moving to previous page..");
-			return true;
-		} else {
-			System.out.println("Personal Loan Page not open!");
-			return false;
-		}
+		Thread.sleep(2000);
+		System.out.println("Personal Loan Page open successfully..!");
+		String result = applyNowDisplayedStringOnApp().getText();
+		System.out.println("Moving to previous page..");
+		backButtonOFApp().click();
+		return result;
 	}
 
-	public boolean personalLoanSeeDetails() {
+	/**
+	 * This method is used to click on See Details Button from Personal Loan
+	 * section and checked whether the required page is open or not
+	 */
+	public String personalLoanSeeDetails() throws InterruptedException {
 		personalLoanSeeDetailsButton().click();
-
-		if (seeDetailsDisplayedStringOnApp().getText().equals("Personal Loan")) {
-			System.out.println("See Details page open successfully..!");
-			backButtonOFApp().click();
-			System.out.println("Moving to previous page..");
-			return true;
-		} else {
-			System.out.println("See Details page not open...");
-			return false;
-		}
+		Thread.sleep(2000);
+		String result = seeDetailsDisplayedStringOnApp().getText();
+		System.out.println("See Details page open successfully..!");
+		System.out.println("Moving to previous page..");
+		backButtonOFApp().click();
+		return result;
 	}
 }

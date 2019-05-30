@@ -2,16 +2,28 @@
 <testng-results skipped="0" failed="0" total="12" passed="12">
   <reporter-output>
   </reporter-output>
-  <suite name="BajajFinserv" duration-ms="194089" started-at="2019-05-30T05:56:56Z" finished-at="2019-05-30T06:00:10Z">
+  <suite name="BajajFinserv" duration-ms="202459" started-at="2019-05-30T16:17:51Z" finished-at="2019-05-30T16:21:13Z">
     <groups>
+      <group name="personalLoan">
+        <method signature="PersonalLoanTest.openRecommendedOffersPage()[pri:0, instance:com.datamato.tests.PersonalLoanTest@506e6d5e]" name="openRecommendedOffersPage" class="com.datamato.tests.PersonalLoanTest"/>
+        <method signature="PersonalLoanTest.PersonalLoanApplyNow()[pri:2, instance:com.datamato.tests.PersonalLoanTest@506e6d5e]" name="PersonalLoanApplyNow" class="com.datamato.tests.PersonalLoanTest"/>
+        <method signature="PersonalLoanTest.personalLoanCalculator()[pri:1, instance:com.datamato.tests.PersonalLoanTest@506e6d5e]" name="personalLoanCalculator" class="com.datamato.tests.PersonalLoanTest"/>
+        <method signature="PersonalLoanTest.personalLoanSeeDetails()[pri:3, instance:com.datamato.tests.PersonalLoanTest@506e6d5e]" name="personalLoanSeeDetails" class="com.datamato.tests.PersonalLoanTest"/>
+      </group> <!-- personalLoan -->
+      <group name="loginExistingCustomer">
+        <method signature="LoginToExistingCustomerTest.loginToExisitngCustomer()[pri:0, instance:com.datamato.tests.LoginToExistingCustomerTest@2812cbfa]" name="loginToExisitngCustomer" class="com.datamato.tests.LoginToExistingCustomerTest"/>
+      </group> <!-- loginExistingCustomer -->
+      <group name="welcomePage">
+        <method signature="WelcomePageTest.welcomePageLoad()[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="welcomePageLoad" class="com.datamato.tests.WelcomePageTest"/>
+      </group> <!-- welcomePage -->
     </groups>
-    <test name="POC_Test_Cases" duration-ms="194089" started-at="2019-05-30T05:56:56Z" finished-at="2019-05-30T06:00:10Z">
+    <test name="POC_Test_Cases" duration-ms="202459" started-at="2019-05-30T16:17:51Z" finished-at="2019-05-30T16:21:13Z">
       <class name="com.datamato.tests.WelcomePageTest">
-        <test-method status="PASS" signature="setup()[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="setup" is-config="true" duration-ms="7439" started-at="2019-05-30T11:26:48Z" finished-at="2019-05-30T11:26:56Z">
+        <test-method status="PASS" signature="setup()[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="setup" is-config="true" duration-ms="7360" started-at="2019-05-30T21:47:43Z" finished-at="2019-05-30T21:47:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- setup -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-05-30T11:26:56Z" finished-at="2019-05-30T11:26:56Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-30T21:47:51Z" finished-at="2019-05-30T21:47:51Z">
           <params>
             <param index="0">
               <value>
@@ -22,11 +34,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="welcomePageLoad()[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="welcomePageLoad" duration-ms="2835" started-at="2019-05-30T11:26:56Z" finished-at="2019-05-30T11:26:59Z">
+        <test-method status="PASS" signature="welcomePageLoad()[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="welcomePageLoad" duration-ms="3492" started-at="2019-05-30T21:47:51Z" finished-at="2019-05-30T21:47:54Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- welcomePageLoad -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-05-30T11:26:59Z" finished-at="2019-05-30T11:26:59Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-30T21:47:54Z" finished-at="2019-05-30T21:47:54Z">
           <params>
             <param index="0">
               <value>
@@ -37,7 +49,7 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="beforeMethod" is-config="true" duration-ms="0" started-at="2019-05-30T11:26:59Z" finished-at="2019-05-30T11:26:59Z">
+        <test-method status="PASS" signature="beforeMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="beforeMethod" is-config="true" duration-ms="1" started-at="2019-05-30T21:47:54Z" finished-at="2019-05-30T21:47:54Z">
           <params>
             <param index="0">
               <value>
@@ -48,11 +60,11 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- beforeMethod -->
-        <test-method status="PASS" signature="selectExistingCustomer()[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="selectExistingCustomer" duration-ms="4342" started-at="2019-05-30T11:26:59Z" depends-on-methods="com.datamato.tests.WelcomePageTest.welcomePageLoad" finished-at="2019-05-30T11:27:03Z">
+        <test-method status="PASS" signature="selectExistingCustomer()[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="selectExistingCustomer" duration-ms="5520" started-at="2019-05-30T21:47:54Z" depends-on-methods="com.datamato.tests.WelcomePageTest.welcomePageLoad" finished-at="2019-05-30T21:48:00Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- selectExistingCustomer -->
-        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="afterMethod" is-config="true" duration-ms="0" started-at="2019-05-30T11:27:03Z" finished-at="2019-05-30T11:27:03Z">
+        <test-method status="PASS" signature="afterMethod(java.lang.reflect.Method)[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="afterMethod" is-config="true" duration-ms="1" started-at="2019-05-30T21:48:00Z" finished-at="2019-05-30T21:48:00Z">
           <params>
             <param index="0">
               <value>
@@ -63,53 +75,53 @@
           <reporter-output>
           </reporter-output>
         </test-method> <!-- afterMethod -->
-        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="tearDown" is-config="true" duration-ms="5432" started-at="2019-05-30T11:30:10Z" finished-at="2019-05-30T11:30:15Z">
+        <test-method status="PASS" signature="tearDown()[pri:0, instance:com.datamato.tests.WelcomePageTest@2d6e8792]" name="tearDown" is-config="true" duration-ms="6834" started-at="2019-05-30T21:51:13Z" finished-at="2019-05-30T21:51:20Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- tearDown -->
       </class> <!-- com.datamato.tests.WelcomePageTest -->
       <class name="com.datamato.tests.PocketInsuranceTest">
-        <test-method status="PASS" signature="scrollToPocketInsuranceAndClickOnSeeDetailsButton()[pri:0, instance:com.datamato.tests.PocketInsuranceTest@506e6d5e]" name="scrollToPocketInsuranceAndClickOnSeeDetailsButton" duration-ms="17451" started-at="2019-05-30T11:29:39Z" finished-at="2019-05-30T11:29:56Z">
+        <test-method status="PASS" signature="scrollToPocketInsuranceAndClickOnSeeDetailsButton()[pri:0, instance:com.datamato.tests.PocketInsuranceTest@3796751b]" name="scrollToPocketInsuranceAndClickOnSeeDetailsButton" duration-ms="19720" depends-on-groups="personalLoan" started-at="2019-05-30T21:48:29Z" finished-at="2019-05-30T21:48:48Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- scrollToPocketInsuranceAndClickOnSeeDetailsButton -->
-        <test-method status="PASS" signature="pocketInsuranceClickTravel()[pri:1, instance:com.datamato.tests.PocketInsuranceTest@506e6d5e]" name="pocketInsuranceClickTravel" duration-ms="2073" started-at="2019-05-30T11:29:56Z" depends-on-methods="com.datamato.tests.PocketInsuranceTest.scrollToPocketInsuranceAndClickOnSeeDetailsButton" finished-at="2019-05-30T11:29:58Z">
+        <test-method status="PASS" signature="pocketInsuranceClickTravel()[pri:1, instance:com.datamato.tests.PocketInsuranceTest@3796751b]" name="pocketInsuranceClickTravel" duration-ms="2236" depends-on-groups="personalLoan" started-at="2019-05-30T21:48:48Z" depends-on-methods="com.datamato.tests.PocketInsuranceTest.scrollToPocketInsuranceAndClickOnSeeDetailsButton" finished-at="2019-05-30T21:48:51Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pocketInsuranceClickTravel -->
-        <test-method status="PASS" signature="pocketInsuranceTravelBrochure()[pri:2, instance:com.datamato.tests.PocketInsuranceTest@506e6d5e]" name="pocketInsuranceTravelBrochure" duration-ms="2597" started-at="2019-05-30T11:29:58Z" depends-on-methods="com.datamato.tests.PocketInsuranceTest.pocketInsuranceClickTravel" finished-at="2019-05-30T11:30:01Z">
+        <test-method status="PASS" signature="pocketInsuranceTravelBrochure()[pri:2, instance:com.datamato.tests.PocketInsuranceTest@3796751b]" name="pocketInsuranceTravelBrochure" duration-ms="2794" depends-on-groups="personalLoan" started-at="2019-05-30T21:48:51Z" depends-on-methods="com.datamato.tests.PocketInsuranceTest.pocketInsuranceClickTravel" finished-at="2019-05-30T21:48:53Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pocketInsuranceTravelBrochure -->
-        <test-method status="PASS" signature="pocketInsuranceTravelKnowMore()[pri:3, instance:com.datamato.tests.PocketInsuranceTest@506e6d5e]" name="pocketInsuranceTravelKnowMore" duration-ms="4612" started-at="2019-05-30T11:30:01Z" depends-on-methods="com.datamato.tests.PocketInsuranceTest.pocketInsuranceClickTravel" finished-at="2019-05-30T11:30:06Z">
+        <test-method status="PASS" signature="pocketInsuranceTravelKnowMore()[pri:3, instance:com.datamato.tests.PocketInsuranceTest@3796751b]" name="pocketInsuranceTravelKnowMore" duration-ms="5012" depends-on-groups="personalLoan" started-at="2019-05-30T21:48:53Z" depends-on-methods="com.datamato.tests.PocketInsuranceTest.pocketInsuranceClickTravel" finished-at="2019-05-30T21:48:58Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pocketInsuranceTravelKnowMore -->
-        <test-method status="PASS" signature="pocketInsuranceTravelApplyNow()[pri:4, instance:com.datamato.tests.PocketInsuranceTest@506e6d5e]" name="pocketInsuranceTravelApplyNow" duration-ms="4260" started-at="2019-05-30T11:30:06Z" depends-on-methods="com.datamato.tests.PocketInsuranceTest.pocketInsuranceClickTravel" finished-at="2019-05-30T11:30:10Z">
+        <test-method status="PASS" signature="pocketInsuranceTravelApplyNow()[pri:4, instance:com.datamato.tests.PocketInsuranceTest@3796751b]" name="pocketInsuranceTravelApplyNow" duration-ms="134540" depends-on-groups="personalLoan" started-at="2019-05-30T21:48:58Z" depends-on-methods="com.datamato.tests.PocketInsuranceTest.pocketInsuranceClickTravel" finished-at="2019-05-30T21:51:13Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- pocketInsuranceTravelApplyNow -->
       </class> <!-- com.datamato.tests.PocketInsuranceTest -->
       <class name="com.datamato.tests.LoginToExistingCustomerTest">
-        <test-method status="PASS" signature="loginToExisitngCustomer()[pri:0, instance:com.datamato.tests.LoginToExistingCustomerTest@2812cbfa]" name="loginToExisitngCustomer" duration-ms="7073" started-at="2019-05-30T11:27:03Z" finished-at="2019-05-30T11:27:10Z">
+        <test-method status="PASS" signature="loginToExisitngCustomer()[pri:0, instance:com.datamato.tests.LoginToExistingCustomerTest@2812cbfa]" name="loginToExisitngCustomer" duration-ms="7988" depends-on-groups="welcomePage" started-at="2019-05-30T21:48:00Z" finished-at="2019-05-30T21:48:08Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- loginToExisitngCustomer -->
       </class> <!-- com.datamato.tests.LoginToExistingCustomerTest -->
       <class name="com.datamato.tests.PersonalLoanTest">
-        <test-method status="PASS" signature="openRecommendedOffersPage()[pri:0, instance:com.datamato.tests.PersonalLoanTest@2acf57e3]" name="openRecommendedOffersPage" duration-ms="2345" started-at="2019-05-30T11:27:10Z" finished-at="2019-05-30T11:27:12Z">
+        <test-method status="PASS" signature="openRecommendedOffersPage()[pri:0, instance:com.datamato.tests.PersonalLoanTest@506e6d5e]" name="openRecommendedOffersPage" duration-ms="2259" depends-on-groups="loginExistingCustomer" started-at="2019-05-30T21:48:08Z" finished-at="2019-05-30T21:48:10Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- openRecommendedOffersPage -->
-        <test-method status="PASS" signature="personalLoanCalculator()[pri:1, instance:com.datamato.tests.PersonalLoanTest@2acf57e3]" name="personalLoanCalculator" duration-ms="6214" started-at="2019-05-30T11:27:12Z" depends-on-methods="com.datamato.tests.PersonalLoanTest.openRecommendedOffersPage" finished-at="2019-05-30T11:27:19Z">
+        <test-method status="PASS" signature="personalLoanCalculator()[pri:1, instance:com.datamato.tests.PersonalLoanTest@506e6d5e]" name="personalLoanCalculator" duration-ms="6670" started-at="2019-05-30T21:48:10Z" depends-on-methods="com.datamato.tests.PersonalLoanTest.openRecommendedOffersPage" finished-at="2019-05-30T21:48:17Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- personalLoanCalculator -->
-        <test-method status="PASS" signature="PersonalLoanApplyNow()[pri:2, instance:com.datamato.tests.PersonalLoanTest@2acf57e3]" name="PersonalLoanApplyNow" duration-ms="5483" started-at="2019-05-30T11:27:19Z" depends-on-methods="com.datamato.tests.PersonalLoanTest.openRecommendedOffersPage" finished-at="2019-05-30T11:27:24Z">
+        <test-method status="PASS" signature="PersonalLoanApplyNow()[pri:2, instance:com.datamato.tests.PersonalLoanTest@506e6d5e]" name="PersonalLoanApplyNow" duration-ms="6182" started-at="2019-05-30T21:48:17Z" depends-on-methods="com.datamato.tests.PersonalLoanTest.openRecommendedOffersPage" finished-at="2019-05-30T21:48:23Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- PersonalLoanApplyNow -->
-        <test-method status="PASS" signature="personalLoanSeeDetails()[pri:2, instance:com.datamato.tests.PersonalLoanTest@2acf57e3]" name="personalLoanSeeDetails" duration-ms="134781" started-at="2019-05-30T11:27:24Z" depends-on-methods="com.datamato.tests.PersonalLoanTest.openRecommendedOffersPage" finished-at="2019-05-30T11:29:39Z">
+        <test-method status="PASS" signature="personalLoanSeeDetails()[pri:3, instance:com.datamato.tests.PersonalLoanTest@506e6d5e]" name="personalLoanSeeDetails" duration-ms="6016" started-at="2019-05-30T21:48:23Z" depends-on-methods="com.datamato.tests.PersonalLoanTest.openRecommendedOffersPage" finished-at="2019-05-30T21:48:29Z">
           <reporter-output>
           </reporter-output>
         </test-method> <!-- personalLoanSeeDetails -->

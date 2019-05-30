@@ -1,0 +1,11 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd" >
+<suite name="BajajFinserv" verbose="1">
+	<test name="POC_Test_Cases">
+		<classes>
+			<class name="com.datamato.tests.WelcomePageTest">
+			</class>
+			<class name="com.datamato.tests.LoginToExistingCustomerTest">
+			</class>
+		</classes>
+	</test>
+</suite>
