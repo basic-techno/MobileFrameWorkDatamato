@@ -17,12 +17,8 @@ jobs:
           GITHUB_TOKEN: ${{ secrets.GITHUB_TOKEN }}  # Needed to get PR information, if any
           SONAR_TOKEN: ${{ secrets.SONAR_TOKEN }}
         with:
-          projectBaseDir: "Bajaj Finserv"
           args: >
             -Dsonar.organization=basic-techno
             -Dsonar.projectKey=basic-techno_MobileFrameWorkDatamato
             -Dsonar.python.coverage.reportPaths=coverage.xml
-            -Dsonar.sources=lib/
-            -Dsonar.test.exclusions=tests/**
-            -Dsonar.tests=tests/
             -Dsonar.verbose=true
